@@ -6,7 +6,8 @@ name: Azure App Service - msa-frontend-2021-phase2-workshop(Production), Build a
 on:
   push:
     branches:
-      - main        
+      - main    
+      - feature/*    
 
 jobs:
   build-and-deploy:
