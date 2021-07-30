@@ -13,7 +13,7 @@ jobs:
     runs-on: windows-latest
     defaults:
       run:
-        working-directory: "./frontend"
+        working-directory: './frontend'
 
     steps:
     # checkout the repo
