@@ -7,7 +7,6 @@ on:
   push:
     branches:
       - main        //if we make changes to either repo, azure will rebuild and re-delpoy.
-      - feature/*
 
 jobs:
   build-and-deploy:
