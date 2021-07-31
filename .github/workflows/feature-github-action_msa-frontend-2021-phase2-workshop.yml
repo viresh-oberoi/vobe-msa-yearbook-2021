@@ -6,14 +6,15 @@ name: Azure App Service - msa-frontend-2021-phase2-workshop(Production), Build a
 on:
   push:
     branches:
-      - main        //if we make changes to either repo, azure will rebuild and re-delpoy.
+      - main    
+      - feature/*    
 
 jobs:
   build-and-deploy:
     runs-on: windows-latest
     defaults:
       run:
-        working-directory: "./frontend"
+        working-directory: './frontend'
 
     steps:
     # checkout the repo
@@ -38,5 +39,5 @@ jobs:
         app-name: msa-frontend-2021-phase2-workshop
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FE797278D769486F8B450D91338207D3 }}
-        package: "./frontend/build"  //specifying to azure what folder to use to build
+        package: "./frontend/build"  
 
